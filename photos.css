@@ -1,0 +1,271 @@
+/*  JavaScript 6th Edition
+    Chapter 5
+    Chapter case
+
+    Photo gallery
+    Large format style sheet
+
+    Filename: photos.css
+*/
+
+/* apply a natural box layout model to all elements */
+* {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+/* reset rules */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+body{
+   background-image: url('images/background2.jpg');
+  width:980px;margin-left:auto;margin-right:auto;
+  color:  azure;
+  }
+
+li {
+   display:inline;
+   font-size: 20px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-weight: bold;
+   padding: 150px;
+ }
+blockquote, q {
+   quotes: none;
+}
+
+ul{
+   margin-left: 100px;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+   content: '';
+   content: none;
+}
+
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+
+a:link {
+   color: red;
+   background-color:transparent;
+   text-decoration: none;
+ }
+ 
+ a:visited {
+   color:white;
+   background-color: transparent;
+   text-decoration:none;
+ }
+ 
+ a:hover {
+   color:purple;
+   background-color: transparent;
+   text-decoration: underline;
+ }
+ 
+ a:active {
+   color: rgb(0, 255, 34);
+   background-color: transparent;
+   text-decoration: underline;
+ }
+
+/* page header */
+header {
+   background-image:url('images/Miami2021_ETG_White_Standard.png');
+   background-repeat: no-repeat;
+   color: azure;
+   height:210px;
+   font-size: 4.7em;
+   text-align: center;
+   font-family: "Freestyle Script";
+   padding-top: 50px;
+   padding-left:20px;
+   padding-bottom: 50px;
+   border: medium solid red;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px  rgb(211, 209, 209);
+}
+/* main content */
+article {
+   position: relative;
+}
+
+article h2 {
+   font-size: 1.2em;
+   font-weight: bold;
+   text-align: left;
+   margin: 0 0 10px 51px;
+}
+
+#leftarrow, #rightarrow {
+   background: #696565;
+   color: white;
+   position: absolute;
+   z-index: 30;
+   text-align: center;
+   height: 135px;
+   width: 40px;
+   top: 67px;
+}
+
+article div:hover {
+   cursor: default;
+}
+
+#leftarrow {
+   left: 0;
+}
+
+#rightarrow {
+   right: 0;
+}
+
+#fiveButton {
+   display: block;
+   width: 100%;
+   position: absolute;
+   top: 290px;
+   color: white;
+   text-align: center;
+}
+
+#fiveButton p {
+   width: 20%;
+   margin: 0 auto;
+   line-height: 2em;
+   background: #696565;
+}
+
+#leftarrow p, #rightarrow p {
+   position: relative;
+   top: 50%;
+   margin-top: -0.5em;
+}
+
+figure {
+   position: absolute;
+   -webkit-box-shadow: 10px 0px 5px rgb(50, 50, 50),
+                       -10px 0px 5px rgb(50, 50, 50);
+   -moz-box-shadow:    10px 0px 5px rgb(50, 50, 50),
+                       -10px 0px 5px rgb(50, 50, 50);
+   box-shadow:         10px 0px 5px rgb(50, 50, 50),
+                       -10px 0px 5px rgb(50, 50, 50);
+}
+
+#fig2 {
+   z-index: 10;
+   left: 13%;
+   top: 34px;
+}
+
+#fig3 {
+   z-index: 20;
+   left: 50%;
+   margin-left: -240px;
+   top: 0;
+}
+
+#fig4 {
+   z-index: 10;
+   right: 13%;
+   top: 34px;
+}
+
+/* footer */
+footer {
+   width: 100%;
+   font-size: 14px;
+   padding: 10px;
+   clear: both;
+   background: black;
+   color: rgb(227,198,32);
+}
+
+footer p {
+   text-align: center;
+}
+
+#favbar {
+   bottom: 10px;
+   height: 210px;
+   border: 3px solid rgba(252, 253, 252, 0.774);
+   background-color: aliceblue;
+}
+
+#favorbar {
+   color:azure;
+   text-align: center;
+   background-color:rgba(71, 75, 74, 0.692);
+   height: 45px;
+   padding-top: 5px;
+   padding-bottom: 9px;
+   border: 3px solid black;
+   font-size: 26px;
+}
+
+#favitems {
+   background: linear-gradient(to bottom right, #131212 0%, #0a0a0a77 50%, #e6ccff60 75%, #e1b3ff13 100%);
+   width: 100%;
+   padding: 10px;
+   height: 100%;
+}
+
+#favitems div {
+   position: relative;
+   display: inline-block;
+}
+
+#favitems div img {
+   height: 150px;
+   width: 190px;
+   object-fit: cover;
+   margin: 0 10px 10px 0;
+   border:2px solid brown;
+}
+
+#favitems div span {
+   display: inline-block;
+   cursor: pointer;
+   bottom: 13px;
+   position: absolute;
+   left: 8%;
+   transform: translateX(-50%);
+   background-color: black;
+   align-content: center;
+   padding: 10px;
+   color: red;
+}
+
+#favitems div span:hover {
+   cursor: pointer;
+   background-color: #5a5555;
+}
+
